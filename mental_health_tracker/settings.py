@@ -31,8 +31,8 @@ DEBUG = not PRODUCTION
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "http://muhammad-vito31-mentalhealthtracker.pbp.cs.ui.ac.id",
-    "https://muhammad-vito31-mentalhealthtracker.pbp.cs.ui.ac.id",
+    "muhammad-vito31-mentalhealthtracker.pbp.cs.ui.ac.id",
+    "muhammad-vito31-mentalhealthtracker.pbp.cs.ui.ac.id",
 ]
 
 
