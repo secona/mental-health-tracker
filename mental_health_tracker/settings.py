@@ -41,18 +41,21 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "muhammad-vito31-mentalhealthtracker.pbp.cs.ui.ac.id",
     "muhammad-vito31-mentalhealthtracker.pbp.cs.ui.ac.id",
+    "10.0.2.2",
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'authentication',
     'main',
 ]
 
@@ -65,7 +68,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
 
 ROOT_URLCONF = 'mental_health_tracker.urls'
 
@@ -85,7 +96,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mental_health_tracker.wsgi.application'
+# WSGI_APPLICATION = 'mental_health_tracker.wsgi.application'
 
 
 # Database
